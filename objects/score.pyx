@@ -254,12 +254,12 @@ class score:
 				if personalBest is None:
 					# This is our first score on this map, so it's our best score
 					self.completed = 3
-					self.rankedScoreIncrease = self.pp
+					self.rankedScoreIncrease = self.score
 					self.oldPersonalBest = 0
 				else:
 					self.calculatePP()
 					# Compare personal best's score with current score
-					self.rankedScoreIncrease = self.pp-personalBest["pp"]
+					self.rankedScoreIncrease = self.score-personalBest["score"]
 					self.oldPersonalBest = personalBest["id"]
 					self.completed = 3 if self.pp > personalBest["pp"] else 2
 			elif self.quit:
